@@ -1,4 +1,4 @@
-const dsteem = require('dstem')
+const dsteem = require('dsteem')
 const client = new dsteem.Client('https://api.hive.blog')
 // https://api.hivekings.com
 // https://anyx.io
