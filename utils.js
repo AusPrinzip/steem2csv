@@ -1,5 +1,5 @@
 const dsteem = require('dsteem')
-const client = new dsteem.Client('https://api.hive.blog')
+const client = new dsteem.Client('https://api.steemit.com')
 // https://api.hivekings.com
 // https://anyx.io
 function getClient () {

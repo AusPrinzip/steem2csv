@@ -4,7 +4,7 @@ const stringify = require('csv-stringify')
 var CombinedStream = require('combined-stream')
 const fs = require('fs')
 const utils = require('../utils.js')
-const rpcnodes = ['https://api.steemit.com']
+const rpcnodes = ['https://api.justyy.com']
 // The readable.pipe() method attaches a Writable stream to the readable, 
 // causing it to switch automatically into flowing mode and push all of its data to the attached Writable. 
 // The flow of data will be automatically managed so that the destination Writable stream is not 
@@ -196,6 +196,7 @@ async function downloadCsv (req, res, next) {
     .pipe(JSONStream.parse('result.*', function (item) {
       let op = item[1].op[1]
       let timestamp = item[1].timestamp
+      console.log(timestamp)
       let opNum = item[0]
       let trx_id = item[1].trx_id
       if (new Date(timestamp) < from) {

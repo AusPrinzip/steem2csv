@@ -16,9 +16,9 @@ function wait () {
 
 async function test (account) {
 	return new Promise((resolve, reject) => {
-		client.database.call('get_account_history', ['likwid', 165088, 1])
+		client.database.call('get_account_history', ['likwid', -1, 10])
 		.then((res) => {
-			console.log(res)
+			res.forEach((el) => console.log(el[1].timestamp))
 			// let filtered = res.filter((el) => el[1].op[0] == ('transfer'))
 			// filtered = filtered.map((el) => el[1].op[1])
 			// filtered.forEach((op) => {
