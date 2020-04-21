@@ -208,7 +208,7 @@ async function downloadCsv (req, res, next) {
       op.count = opNum
       op.trx_id = trx_id
       if (item[1].op[0] == 'transfer') {
-        let currency = op.amount.indexOf('HIVE') > -1 ? 'HIVE' : 'HBD'
+        let currency = op.amount.indexOf('STEEM') > -1 ? 'STEEM' : 'SBD'
         op.amount = parseFloat(op.amount).toFixed(3)
         op.currency = currency
       }
